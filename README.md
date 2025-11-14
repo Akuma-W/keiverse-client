@@ -23,6 +23,7 @@ KEIVerse simplifies classroom management, improves student engagement, and provi
 - **Router Management:** React Router v7
 - **State Management:** React Redux + Redux Toolkit
 - **API Services**: Axios
+- **Code Quality Tools**: Eslint, Prettier
 
 ---
 
@@ -72,6 +73,21 @@ npm run dev
 
 > Runs at: `http://localhost:5173/` (or port displayed in terminal)
 
+### 5. Code Lint & Formatting
+
+This project uses **ESLint** for linting and **Prettier** for code formatting.  
+To check lint errors:
+
+```bash
+npm run lint
+```
+
+To format code automatically:
+
+```bash
+npm run format
+```
+
 ---
 
 ## Folder Structure
@@ -97,6 +113,14 @@ npm run dev
 ┃ ┣ 📄 App.tsx          # Main App component
 ┃ ┣ 📄 main.tsx         # Application entry point
 ┃ ┗ 📄 style.css        # Global TailwindCSS configuration
+┣ 📄 .env                # Environment variables
+┣ 📄 .eslintrc.cjs       # ESLint configuration
+┣ 📄 .prettierrc         # Prettier configuration
+┣ 📄 components.json     # Shadcn/UI configuration
+┣ 📄 tsconfig.json       # TypeScript configuration
+┣ 📄 vite.config.ts      # Vite configuration
+┣ 📄 package.json        # Project dependencies
+┗ 📄 README.md           # Project documentation
 ```
 
 ---
@@ -107,5 +131,3 @@ npm run dev
 - **Author:** Tran Tuan Phong (22521094 - UIT)
 - **Email:** [tuanphongbrvt1@gmail.com](mailto:tuanphongbrvt1@gmail.com)
 - **Linkedln**: [Phong Tran Tuan](https://www.linkedin.com/in/phongakuma/)
-
-> ⚡ Notes: Screenshots/GIFs and Live Demo link will be updated soon.
