@@ -1,0 +1,97 @@
+{
+  "welcome": "KEIVerse Xin chào!",
+  "news": {
+    "title": "Mới nhất"
+  },
+  "about": {
+    "tag": "Giới thiệu KEIVerse",
+    "title": "KEIVerse xây dựng một không gian giáo dục số hiện đại, nơi giảng viên không chỉ giảng dạy mà còn đồng hành cùng học viên trong suốt hành trình học tập.",
+    "items": [
+      "Kết nối trực tiếp Giảng viên và Học viên theo thời gian thực.",
+      "Số hóa toàn bộ bài giảng, bài tập và điểm số.",
+      "Gamification & Quiz giúp tăng động lực học tập."
+    ]
+  },
+  "features": {
+    "tag": "Tiện ích cốt lõi",
+    "title": "Mọi thứ bạn cần để Dạy và Học",
+    "items": [
+      {
+        "title": "Quiz Ôn Tập",
+        "desc": "Củng cố kiến thức thông qua các bài kiểm tra ngắn ngay tại lớp.",
+        "icon": "Zap",
+        "color": "bg-blue-500"
+      },
+      {
+        "title": "Khoá học & Bài tập",
+        "desc": "Quản lý bài giảng, nộp bài trực tuyến và nhận phản hồi tức thì.",
+        "icon": "BookOpen",
+        "color": "bg-emerald-500"
+      },
+      {
+        "title": "Cập nhật Điểm số",
+        "desc": "Theo dõi tiến độ học tập qua biểu đồ trực quan và minh bạch.",
+        "icon": "BarChart3",
+        "color": "bg-amber-500"
+      },
+      {
+        "title": "Thảo luận lớp",
+        "desc": "Kênh trao đổi sôi nổi giúp giải đáp thắc mắc và kết nối cộng đồng.",
+        "icon": "MessageSquare",
+        "color": "bg-indigo-500"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Cảm nhận từ người dùng",
+    "items": [
+      {
+        "name": "Nguyễn Văn A",
+        "role": "Giảng viên",
+        "avatar": "/avatars/1.png",
+        "comment": "KEIVerse giúp tôi quản lý lớp học hiệu quả!"
+      },
+      {
+        "name": "Trần Thị B",
+        "role": "Giáo viên",
+        "avatar": "/avatars/2.png",
+        "comment": "Quiz realtime cực kỳ tiện lợi cho giảng viên."
+      },
+      {
+        "name": "Lê Văn C",
+        "role": "Sinh viên",
+        "avatar": "/avatars/3.png",
+        "comment": "Giao diện thân thiện, dễ sử dụng."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Cách hoạt động",
+    "steps": [
+      {
+        "title": "Đăng ký / Đăng nhập",
+        "desc": "Tạo tài khoản hoặc đăng nhập vào hệ thống."
+      },
+      {
+        "title": "Tham gia / Tạo Lớp",
+        "desc": "Tham gia lớp học sẵn có hoặc tạo lớp mới."
+      },
+      {
+        "title": "Tham gia bài tập & quiz",
+        "desc": "Hoàn thành bài tập, quiz và nhận điểm."
+      },
+      {
+        "title": "Tương tác & Nhận phản hồi",
+        "desc": "Tham gia forum, chat nhóm, nhận phản hồi."
+      }
+    ]
+  },
+  "feedback": {
+    "title": "Feeback",
+    "form": {
+      "email": "Nhập Email của bạn",
+      "message": "Đánh giá của bạn",
+      "submit": "Gửi"
+    }
+  }
+}

@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-function AdminLayout() {
+const AdminLayout = () => {
   return (
     <div>
       AdminLayout
@@ -9,6 +9,6 @@ function AdminLayout() {
       </div>
     </div>
   );
-}
+};
 
 export default AdminLayout;

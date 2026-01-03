@@ -1,0 +1,47 @@
+{
+  "name": "KEIVerse",
+  "slogan": "Connecting minds, Expanding learning journeys!",
+  "navbar": {
+    "home": "Home",
+    "classes": "Classes",
+    "quiz": "Quiz",
+    "random": "Random",
+    "contact": "Contact"
+  },
+  "header": {
+    "login": "Login",
+    "register": "Register",
+    "notifications": "Notifications",
+    "chat": "Chat",
+    "profileMenu": {
+      "profile": "Profile",
+      "adminPanel": "Admin Panel",
+      "logout": "Logout"
+    }
+  },
+  "footer": {
+    "about": "KEIVerse is an interactive learning platform designed to support teaching, learning, collaboration, and personalized learning experiences.",
+    "quickLinks": {
+      "name": "Quick Links",
+      "home": "Home",
+      "dashboard": "Dashboard",
+      "quiz": "Quiz Center",
+      "random": "Random Wheel"
+    },
+    "contact": {
+      "name": "Contact Us",
+      "owner": "Owner",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "socials": {
+      "name": "Social Media",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "copyright": "KEIVerse LMS - All rights reserved."
+  }
+}

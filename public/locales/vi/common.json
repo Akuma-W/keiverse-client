@@ -1,0 +1,47 @@
+{
+  "name": "KEIVerse",
+  "slogan": "Kết nối tri thức. Khám phá hành trình học tập!",
+  "navbar": {
+    "home": "Trang chủ",
+    "classes": "Lớp học",
+    "quiz": "Quiz",
+    "random": "Random",
+    "contact": "Liên hệ"
+  },
+  "header": {
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "notifications": "Thông báo",
+    "chat": "Tin nhắn",
+    "profileMenu": {
+      "profile": "Hồ sơ",
+      "adminPanel": "Quản lí website",
+      "logout": "Đăng xuất"
+    }
+  },
+  "footer": {
+    "about": "KEIVerse là một nền tảng hỗ trợ học tập tương tác được thiết kế giúp hỗ trợ quá trình giảng dạy, học tập, hợp tác và trải nghiệm học tập cá nhân hóa.",
+    "quickLinks": {
+      "name": "Truy cập nhanh",
+      "home": "Trang chủ",
+      "dashboard": "Bảng điều khiển",
+      "quiz": "Trung tâm Quiz",
+      "random": "Vòng quay ngẫu nhiên"
+    },
+    "contact": {
+      "name": "Liên hệ",
+      "owner": "Sở hữu",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "address": "Địa chỉ"
+    },
+    "socials": {
+      "name": "Mạng xã hội",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "copyright": "KEIVerse LMS - Bảo lưu mọi quyền."
+  }
+}

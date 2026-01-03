@@ -1,0 +1,79 @@
+{
+  "welcome": "Welcome to KEIVerse!",
+  "news": {
+    "title": "Newest"
+  },
+  "about": {
+    "title": "About us",
+    "description": "Thu hẹp khoảng cách giữa Dạy và Học"
+  },
+  "features": {
+    "title": "Key Features",
+    "items": [
+      {
+        "title": "Create & Join Classes",
+        "desc": "Manage classes and join learning easily."
+      },
+      {
+        "title": "Quizzes & Assignments",
+        "desc": "Realtime quizzes and online assignments system."
+      },
+      {
+        "title": "Forum & Group Chat",
+        "desc": "Engage in discussions anonymously or publicly."
+      },
+      {
+        "title": "Random Selection",
+        "desc": "Randomly select students, groups, or ideas."
+      },
+      {
+        "title": "Personal Dashboard",
+        "desc": "Track learning progress and scores."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "User Testimonials",
+    "items": [
+      {
+        "name": "Nguyen Van A",
+        "role": "Lecturer",
+        "avatar": "/avatars/1.png",
+        "comment": "KEIVerse helps me manage classes effectively!"
+      },
+      {
+        "name": "Tran Thi B",
+        "role": "Teacher",
+        "avatar": "/avatars/2.png",
+        "comment": "Realtime quizzes are very convenient for instructors."
+      },
+      {
+        "name": "Le Van C",
+        "role": "Student",
+        "avatar": "/avatars/3.png",
+        "comment": "User-friendly interface and easy to use."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "title": "Sign Up / Login",
+        "desc": "Create an account or log into the system."
+      },
+      {
+        "title": "Join / Create Class",
+        "desc": "Join an existing class or create a new one."
+      },
+      {
+        "title": "Complete Assignments & Quizzes",
+        "desc": "Finish tasks and quizzes to earn points."
+      },
+      {
+        "title": "Interact & Get Feedback",
+        "desc": "Join forums, group chats, and receive feedback."
+      }
+    ]
+  }
+}

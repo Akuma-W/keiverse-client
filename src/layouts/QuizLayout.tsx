@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-function QuizLayout() {
+const QuizLayout = () => {
   return (
     <div>
       QuizLayout
@@ -9,6 +9,6 @@ function QuizLayout() {
       </div>
     </div>
   );
-}
+};
 
 export default QuizLayout;

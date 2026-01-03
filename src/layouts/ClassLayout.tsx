@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-function ClassLayout() {
+const ClassLayout = () => {
   return (
     <div>
       ClassLayout
@@ -9,6 +9,6 @@ function ClassLayout() {
       </div>
     </div>
   );
-}
+};
 
 export default ClassLayout;

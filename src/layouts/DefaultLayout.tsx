@@ -1,21 +1,22 @@
-import { Outlet } from "react-router-dom";
-import Breadcrumb from "@/components/common/Breadcrumb";
-import FooterC from "@/components/common/FooterC";
-import HeaderC from "@/components/common/HeaderC";
-import Navbar from "@/components/common/Navbar";
+import { Outlet, useLocation } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { BreadcrumbC, FooterC, HeaderC } from '@/components/layout';
 
-function DefaultLayout() {
+const DefaultLayout = () => {
+  const { isLoggedIn } = useAuth();
+  const location = useLocation();
+  const segments = location.pathname.split('/').filter(Boolean);
+
   return (
     <div className="flex min-h-screen flex-col">
-      <HeaderC />
-      <Navbar />
-      <Breadcrumb />
-      <main className="container mx-auto flex-1 p-4">
+      <HeaderC isLoggedIn={isLoggedIn} />
+      <BreadcrumbC segments={segments} />
+      <main className="flex-1 mx-auto max-w-7xl w-full">
         <Outlet />
       </main>
       <FooterC />
     </div>
   );
-}
+};
 
 export default DefaultLayout;
