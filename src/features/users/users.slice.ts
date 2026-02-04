@@ -4,24 +4,27 @@ import { usersService } from '@/services/users.service';
 
 interface UsersState {
   list: User[];
-  current?: User;
+  current: User | null;
   loading: boolean;
 }
 
 const initialState: UsersState = {
   list: [],
+  current: null,
   loading: false,
 };
 
 // Fetch users Thunk
-export const fetchUsersThunk = createAsyncThunk('users/getAll', async (params: QueryUsersDto) =>
-  usersService.getAll(params),
+export const fetchUsersThunk = createAsyncThunk(
+  'users/getAll',
+  async (params: QueryUsersDto) => await usersService.getAll(params),
 );
 
 // Fetch user by id Thunk
-export const fetchUserByIdThunk = createAsyncThunk('users/getOne', async (id: number) =>
-  usersService.getOne(id),
-);
+export const fetchUserByIdThunk = createAsyncThunk('users/getOne', async (id: number) => {
+  const data = await usersService.getOne(id);
+  return data;
+});
 
 const usersSlice = createSlice({
   name: 'users',

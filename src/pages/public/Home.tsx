@@ -11,27 +11,30 @@ import { Card } from '@/components/ui/card';
 
 const BANNERS = [
   {
+    id: 1,
     tag: 'Connect Your Mind',
     title: 'KEIVerse: Vũ Trụ Giáo Dục Tương Tác',
-    desc: 'Nền tảng kết nối giảng viên và học viên thông qua hệ sinh thái học tập số hiện đại.',
+    desc: 'Nền tảng kết nối giảng viên và học viên thông qua hệ sinh thái học tập số hiện đại. Học tập không giới hạn, sáng tạo không biên giới.',
     image:
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200',
     color: 'from-indigo-600 to-purple-600',
   },
   {
+    id: 2,
     tag: 'Smart Revision',
     title: 'Hệ Thống Quiz Ôn Tập Thông Minh',
-    desc: 'Quiz được thiết kế tối ưu cho việc ghi nhớ và ôn tập hiệu quả.',
+    desc: 'Củng cố kiến thức thông qua các bài Quiz được thiết kế tối ưu cho việc ghi nhớ và ôn tập hiệu quả sau mỗi buổi học.',
     image:
-      'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200',
     color: 'from-emerald-500 to-teal-500',
   },
   {
+    id: 3,
     tag: 'Active Discussion',
     title: 'Thảo Luận & Tương Tác Sôi Nổi',
-    desc: 'Không gian trao đổi trực tiếp giữa giảng viên và học viên.',
+    desc: 'Xây dựng môi trường thảo luận trực tiếp ngay trong lớp học, giúp học viên giải quyết vấn đề và trao đổi ý tưởng cùng giảng viên.',
     image:
-      'https://images.unsplash.com/photo-152202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200',
     color: 'from-blue-600 to-indigo-500',
   },
 ];
@@ -118,7 +121,7 @@ const Home = () => {
             {/* IMAGE */}
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1523240715181-01489bb2e40d?auto=format&fit=crop&q=80&w=900"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200"
                 alt="KEIVerse About"
                 className="rounded-[2.5rem] shadow-2xl"
               />

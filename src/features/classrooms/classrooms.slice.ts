@@ -24,18 +24,21 @@ export const fetchClassroomsThunk = createAsyncThunk(
   },
 );
 
-// Fetch my classrooms
-export const fetchMyClassroomsThunk = createAsyncThunk('classrooms/getMine', async () => {
-  const res = await classroomsService.getMine();
-  return res.data.data; // <-- RETURN ARRAY
-});
-
 // Fetch classroom by id
 export const fetchClassroomByIdThunk = createAsyncThunk(
   'classrooms/getById',
   async (id: number) => {
     const res = await classroomsService.getById(id);
     return res.data; // <-- ALWAYS return res.data
+  },
+);
+
+// Join classroom by code
+export const fetchClassroomByCodeThunk = createAsyncThunk(
+  'enrollments/joinByCode',
+  async (code: string) => {
+    const res = await classroomsService.getByCode(code);
+    return res.data;
   },
 );
 
@@ -57,10 +60,6 @@ const classroomsSlice = createSlice({
     builder.addCase(fetchClassroomsThunk.fulfilled, (state, action) => {
       state.list = action.payload;
       state.loading = false;
-    });
-
-    builder.addCase(fetchMyClassroomsThunk.fulfilled, (state, action) => {
-      state.myClassrooms = action.payload;
     });
 
     builder.addCase(fetchClassroomByIdThunk.fulfilled, (state, action) => {

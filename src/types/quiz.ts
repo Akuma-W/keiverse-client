@@ -1,20 +1,18 @@
-import type { ID, Timestamped } from './common.type';
-
-export interface Quiz extends Timestamped {
-  quizId: ID;
-  classId: ID;
+export interface Quiz {
+  quizId: number;
+  classId: number;
   title: string;
   description?: string;
   mode: 'offline' | 'online';
   timeLimit?: number;
-  createdBy: ID;
+  createdBy: number;
 }
 
 export type QuestionType = 'mcq' | 'multi' | 'short';
 
 export interface QuizQuestion {
-  questionId: ID;
-  quizId: ID;
+  questionId: number;
+  quizId: number;
   text: string;
   type: QuestionType;
   options?: string[];
@@ -23,8 +21,8 @@ export interface QuizQuestion {
 }
 
 export interface QuizSession {
-  sessionId: ID;
-  quizId: ID;
+  sessionId: number;
+  quizId: number;
   joinCode: string;
   startTime?: string;
   endTime?: string;
@@ -33,10 +31,10 @@ export interface QuizSession {
 }
 
 export interface QuizResult {
-  resultId: ID;
-  sessionId: ID;
-  quizId: ID;
-  studentId: ID;
+  resultId: number;
+  sessionId: number;
+  quizId: number;
+  studentId: number;
   answers: Record<string, any>;
   score: number;
   startedAt: string;

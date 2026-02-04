@@ -1,10 +1,10 @@
-import type { CreateRoleDto, QueryRolesDto, Role, UpdateRoleDto } from '@/types/roles.type';
+import type { CreateRoleDto, Role, UpdateRoleDto } from '@/types/roles.type';
 import api from './api';
 
 export const rolesService = {
   create: (dto: CreateRoleDto) => api.post('/roles', dto).then((r) => r.data),
 
-  getAll: (params: QueryRolesDto) => api.get('/roles', { params }).then((r) => r.data),
+  getAll: () => api.get('/roles').then((r) => r.data),
 
   getOne: (id: number) => api.get<Role>(`/roles/${id}`).then((r) => r.data),
 

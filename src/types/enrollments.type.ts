@@ -1,9 +1,16 @@
+import type { Classroom } from './classrooms.type';
+import type { User } from './users.type';
+
 export interface Enrollment {
   id: number;
   userId: number;
   classId: number;
   status: 'pending' | 'approved' | 'rejected';
+  roleIn: string;
   joinedAt: string;
+  classroom: Classroom;
+
+  user: User;
 }
 
 export interface CreateEnrollmentDto {

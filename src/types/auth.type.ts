@@ -18,10 +18,15 @@ export interface RegisterDto {
   email?: string;
   phone?: string;
   school?: string;
-  role: 'student' | 'teacher';
+  roleId: number;
 }
 
 export interface ChangePasswordDto {
   oldPassword: string;
   newPassword: string;
+}
+
+export interface VerifyDTO {
+  username: string;
+  otp: string;
 }

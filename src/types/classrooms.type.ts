@@ -1,3 +1,5 @@
+import type { User } from './users.type';
+
 export interface Classroom {
   id: number;
   title: string;
@@ -9,16 +11,17 @@ export interface Classroom {
   termStart: string;
   termEnd: string;
 
-  teacher: {
-    id: number;
-    username: string;
-    fullName: string;
+  teacher: User;
+  _count?: {
+    enrollments: number;
   };
 }
 
 export interface CreateClassroomDto {
   title: string;
   description: string;
+  termStart: string;
+  termEnd: string;
 }
 
 export interface JoinClassroomDto {

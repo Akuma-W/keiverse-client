@@ -7,6 +7,7 @@ export const CONTACT = {
 
 export const SOCIALS = {
   facebook: 'https://www.facebook.com/akumaphong',
+  github: 'https://github.com/Akuma-W',
   linkedin: 'https://www.linkedin.com/in/akumaphong',
   instagram: 'https://www.instagram.com/akumaphong',
 };

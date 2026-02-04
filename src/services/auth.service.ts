@@ -1,16 +1,19 @@
-import type { ChangePasswordDto, LoginDto, RegisterDto } from '@/types/auth.type';
+import type { ChangePasswordDto, LoginDto, RegisterDto, VerifyDTO } from '@/types/auth.type';
 import api from './api';
 
 export const authService = {
   register: (data: RegisterDto) => api.post('/auth/register/get-otp', data).then((res) => res.data),
 
-  verifyOtp: (data: RegisterDto) => api.post('/auth/register/verify-otp', data).then((r) => r.data),
+  verifyOtp: (data: VerifyDTO) => api.post('/auth/register/verify-otp', data).then((r) => r.data),
 
-  login: (data: LoginDto) => api.post('/auth/login', data).then((r) => r.data),
+  login: (data: LoginDto) =>
+    api.post('/auth/login', data).then((r) => {
+      return r.data;
+    }),
 
-  refresh: () => api.post('/auth/refresh').then((r) => r.data),
-
-  logout: () => api.post('/auth/logout').then((r) => r.data),
+  logout: async () => {
+    await api.post('/auth/logout');
+  },
 
   changePassword: (data: ChangePasswordDto) =>
     api.post('/auth/change-password', data).then((r) => r.data),

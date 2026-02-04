@@ -15,7 +15,7 @@ export const Register = lazy(() => import('./auth/Register'));
 // ===== DASHBOARD =====
 export const Dashboard = lazy(() => import('./dashboard/Dashboard'));
 export const Profile = lazy(() => import('./dashboard/Profile'));
-export const Random = lazy(() => import('./dashboard/Random'));
+export const Random = lazy(() => import('./public/Random'));
 
 // ===== CLASS =====
 export const ClassDetail = lazy(() => import('./class/ClassDetail'));

@@ -1,5 +1,5 @@
 import { type PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import type { LoginDto, RegisterDto } from '@/types/auth.type';
+import type { LoginDto, RegisterDto, VerifyDTO } from '@/types/auth.type';
 import type { User } from '@/types/users.type';
 import { authService } from '@/services/auth.service';
 
@@ -8,6 +8,8 @@ interface AuthState {
   accessToken: string | null;
   loading: boolean;
   error?: string | null;
+  isOtpStep: boolean;
+  registerContact: string | null;
 }
 
 const initialState: AuthState = {
@@ -15,6 +17,8 @@ const initialState: AuthState = {
   accessToken: null,
   loading: false,
   error: null,
+  isOtpStep: false,
+  registerContact: null,
 };
 
 // Login Thunk
@@ -24,8 +28,8 @@ export const loginThunk = createAsyncThunk(
     try {
       const res = await authService.login(payload);
       return res.data;
-    } catch {
-      return rejectWithValue('Login failed');
+    } catch (error: any) {
+      return rejectWithValue(error.response?.data?.message || 'Login failed: ');
     }
   },
 );
@@ -37,8 +41,20 @@ export const registerThunk = createAsyncThunk(
     try {
       const res = await authService.register(payload);
       return res.data;
-    } catch {
-      return rejectWithValue('Register failed');
+    } catch (error) {
+      return rejectWithValue(`Register failed: ${error}`);
+    }
+  },
+);
+
+// Verify OTP Thunk
+export const verifyOtpThunk = createAsyncThunk(
+  'auth/verifyOtp',
+  async (data: VerifyDTO, { rejectWithValue }) => {
+    try {
+      return await authService.verifyOtp(data);
+    } catch (err: any) {
+      return rejectWithValue(err.response?.data?.message || 'OTP invalid');
     }
   },
 );
@@ -59,6 +75,7 @@ export const fetchProfileThunk = createAsyncThunk(
 // Logout Thunk
 export const logoutThunk = createAsyncThunk('auth/logout', async () => {
   await authService.logout();
+  localStorage.removeItem('accessToken');
   return true;
 });
 
@@ -80,10 +97,10 @@ const authSlice = createSlice({
       state.error = null;
     });
     builder.addCase(loginThunk.fulfilled, (state, action) => {
-      console.log('Payload:', action.payload);
       state.loading = false;
       state.accessToken = action.payload.accessToken;
       state.user = action.payload.user;
+      localStorage.setItem('accessToken', action.payload.accessToken);
     });
     builder.addCase(loginThunk.rejected, (state, action) => {
       state.loading = false;
@@ -93,13 +110,21 @@ const authSlice = createSlice({
     // Register
     builder.addCase(registerThunk.pending, (state) => {
       state.loading = true;
+      state.error = null;
     });
-    builder.addCase(registerThunk.fulfilled, (state) => {
+    builder.addCase(registerThunk.fulfilled, (state, action) => {
       state.loading = false;
+      state.isOtpStep = true;
+      state.registerContact = action.meta.arg.email || action.meta.arg.phone || null;
     });
     builder.addCase(registerThunk.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload as string;
+    });
+
+    // Verify OTP
+    builder.addCase(verifyOtpThunk.fulfilled, (state) => {
+      state.isOtpStep = false;
     });
 
     // Fetch profile

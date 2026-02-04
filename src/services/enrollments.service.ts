@@ -19,8 +19,8 @@ export const enrollmentsService = {
   getByUser: (userId: number, status?: string) =>
     api.get(`/enrollments/user/${userId}`, { params: { status } }).then((r) => r.data),
 
-  getMine: (status?: string) =>
-    api.get(`/enrollments/my-enrollments`, { params: { status } }).then((r) => r.data),
+  getMyClass: (status?: string) =>
+    api.get(`/enrollments/me`, { params: { status } }).then((r) => r.data),
 
   getOne: (id: number) => api.get(`/enrollments/${id}`).then((r) => r.data),
 

@@ -1,14 +1,14 @@
-import { WEBSITE } from '@/config';
 import { Link } from 'react-router-dom';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import Logo from '@/components/logo/Logo';
 
 const NotFound = () => {
   usePageTitle({ title: 'Not Found' });
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 text-gray-800">
       {/* Logo */}
-      <img src={WEBSITE.logo} alt="Logo" className="mb-8 w-40 rounded-full" />
-
+      <Logo />
       {/* Message */}
       <h1 className="mb-4 text-6xl font-extrabold">404</h1>
       <p className="mb-6 text-center text-xl md:text-2xl">

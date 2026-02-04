@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { useWebsiteConfig } from '@/hooks/useWebsiteConfig';
 
@@ -16,6 +17,7 @@ const Logo = ({
   withSlogan = false,
   className,
 }: LogoProps) => {
+  const navigate = useNavigate();
   const { slogan, logo } = useWebsiteConfig();
 
   const sizeClasses = {
@@ -35,7 +37,10 @@ const Logo = ({
   const sloganColor = variant === 'light' ? 'text-blue-200' : 'text-slate-500';
 
   return (
-    <div className={cn('flex items-center gap-3 select-none', className)}>
+    <button
+      className={cn('flex items-center gap-1 select-none cursor-pointer', className)}
+      onClick={() => navigate('/')}
+    >
       {/* Logo Icon */}
       <div className={cn('relative flex items-center justify-center shrink-0', sizeClasses[size])}>
         <img src={logo} alt="KEIVerse Logo" className="w-full h-full object-contain" />
@@ -64,7 +69,7 @@ const Logo = ({
           </span>
         )}
       </div>
-    </div>
+    </button>
   );
 };
 

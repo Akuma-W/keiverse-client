@@ -31,20 +31,13 @@ import {
   UserManagement,
 } from '@/pages';
 import { createBrowserRouter } from 'react-router-dom';
-import {
-  AdminLayout,
-  AuthLayout,
-  ClassLayout,
-  DefaultLayout,
-  PublicLayout,
-  QuizLayout,
-} from '../layouts';
+import { AdminLayout, AuthLayout, ClassLayout, DefaultLayout, QuizLayout } from '../layouts';
 import ProtectedRoute from './ProtectedRoute';
 
 export const router = createBrowserRouter([
   { errorElement: <NotFound /> },
   {
-    element: <PublicLayout />,
+    element: <DefaultLayout />,
     children: [
       { path: '/', element: <Home /> },
       { path: 'contact', element: <Contact /> },
@@ -65,28 +58,34 @@ export const router = createBrowserRouter([
       {
         element: <DefaultLayout />,
         children: [
-          { path: 'dashboard', element: <Dashboard /> },
           { path: 'profile', element: <Profile /> },
+          { path: 'profile/:id', element: <Profile /> },
           {
-            path: 'class/:classId',
+            path: '',
             element: <ClassLayout />,
             children: [
-              { index: true, element: <ClassDetail /> },
-              { path: 'members', element: <ClassMembers /> },
-              { path: 'grade', element: <ClassGrade /> },
-              { path: 'assignments', element: <AssignmentList /> },
-              { path: 'assignments/:assignId', element: <AssignmentDetail /> },
-              { path: 'documents', element: <DocumentList /> },
-              { path: 'documents/:documentId', element: <DocumentDetail /> },
-              { path: 'forum', element: <ForumList /> },
-              { path: 'forum/:postId', element: <ForumDetail /> },
-              { path: 'surveys', element: <SurveyList /> },
-              { path: 'surveys/:surveyId', element: <SurveyDetail /> },
-              { path: 'quizzes', element: <QuizList /> },
+              { path: 'dashboard', element: <Dashboard /> },
+              {
+                path: 'class/:classId',
+                children: [
+                  { index: true, element: <ClassDetail /> },
+                  { path: 'members', element: <ClassMembers /> },
+                  { path: 'grade', element: <ClassGrade /> },
+                  { path: 'assignments', element: <AssignmentList /> },
+                  { path: 'assignment/:assignId', element: <AssignmentDetail /> },
+                  { path: 'documents', element: <DocumentList /> },
+                  { path: 'document/:documentId', element: <DocumentDetail /> },
+                  { path: 'forum', element: <ForumList /> },
+                  { path: 'forum/:postId', element: <ForumDetail /> },
+                  { path: 'surveys', element: <SurveyList /> },
+                  { path: 'survey/:surveyId', element: <SurveyDetail /> },
+                  { path: 'quizzes', element: <QuizList /> },
+                ],
+              },
             ],
           },
           {
-            path: '/quiz',
+            path: 'quiz',
             element: <QuizLayout />,
             children: [
               { index: true, element: <QuizDashboard /> },
@@ -99,7 +98,7 @@ export const router = createBrowserRouter([
         ],
       },
       {
-        path: '/admin',
+        path: 'admin',
         element: <AdminLayout />,
         children: [
           { index: true, element: <AdminDashboard /> },

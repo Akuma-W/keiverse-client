@@ -45,7 +45,7 @@ const FooterC = () => {
     name: t('footer.socials.name'),
     links: [
       { name: 'Facebook', href: SOCIALS.facebook, icon: <Facebook size={16} /> },
-      { name: 'Twitter', href: SOCIALS.twitter, icon: <Twitter size={16} /> },
+      { name: 'Github', href: SOCIALS.github, icon: <Twitter size={16} /> },
       { name: 'LinkedIn', href: SOCIALS.linkedin, icon: <Linkedin size={16} /> },
       { name: 'Instagram', href: SOCIALS.instagram, icon: <Instagram size={16} /> },
     ],
